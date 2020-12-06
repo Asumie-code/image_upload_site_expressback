@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { authentcateToken, cleanUser }   = require('../middleware/helper');
 
-const secret = process.env.JWT_SECRET
+const secret = process.env.JWT_SECRET || 'shhh';
 
 router.get('/user', authentcateToken, async (req, res) => {
     res.status(200).json(cleanUser(req.user));
@@ -13,7 +13,7 @@ router.get('/user', authentcateToken, async (req, res) => {
 });
 
 
-router.post('/login', async (req, res) => {
+router.post('/login', async (req, res, next) => {
     
     let email = req.body.email;
     let password = req.body.password;
@@ -52,7 +52,7 @@ router.post('/login', async (req, res) => {
 
 
 
-router.post('/register', (req, res) => {
+router.post('/register', (req, res, next) => {
     let name = req.body.name;
     let lastName = req.body.lastName; 
     let email = req.body.email;

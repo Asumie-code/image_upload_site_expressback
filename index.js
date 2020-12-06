@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const router = require('./routes/router');
 const mongoUrl = process.env.MONGO_URL;
-const port = process.env.SERVER_PORT;
+const port = process.env.SERVER_PORT || 5000;
 
 
 
@@ -41,7 +41,7 @@ app.use('/assets/images', express.static('./img'));
 app.use(function(err, req, res ,next) {
   console.log(err)
   res.status(500).json({message: 'internal app error'})
- 
+  next()
 })
 
 
