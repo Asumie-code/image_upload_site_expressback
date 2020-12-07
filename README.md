@@ -23,7 +23,7 @@ the port of the server. if you change this, you need to update the urls in the f
 by default the port should be 5000.
 
 ### JWT_SECRET:
-Jsonwebtoken the secret by default  is 'shhh'.
+Jsonwebtoken secret. the secret by default  is 'shhh'.
 
 ## Note
 
