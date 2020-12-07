@@ -2,7 +2,7 @@
 
 ### npm run dev
 
-Runs the app in with nodemon 
+Runs the app  with nodemon 
 
 
 ### npm run start 
@@ -16,15 +16,15 @@ Runs the app with node js
 you can use dotenv module to setup the following environment variable: 
 
 ### MONGO_URL: 
-mongodb url
+mongodb url.
 
 ### SERVER_PORT:
-the port of the server if you change this, you need to update the urls in the front-end  repository
-by default the port should be 5000
+the port of the server. if you change this, you need to update the urls in the front-end  repository,
+by default the port should be 5000.
 
 ### JWT_SECRET:
-Jsonwebtoken secret by default the secret is 'shhh'
+Jsonwebtoken the secret by default  is 'shhh'.
 
 ## Note
 
-Post uploading is done using formidable and form data
+Post uploading is done using formidable and form data.
