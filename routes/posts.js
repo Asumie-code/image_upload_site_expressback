@@ -26,7 +26,7 @@ router.post('/gallery',  (req, res, next) => {
 
         try{
             await User.updateOne(
-                { _id: JSON.parse(req.query.user).id  },
+                { _id: req.query.user.id  },
                 {
                     $push: {
                         posts: {
